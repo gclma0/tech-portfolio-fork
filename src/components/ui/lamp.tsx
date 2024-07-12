@@ -40,7 +40,7 @@ export const LampContainer = ({
     >
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
         <motion.div
-          initial={{ opacity: 0.5, width: isSmallScreen ? "3rem" : "30rem" }}
+          initial={{ opacity: 0.5, width: isSmallScreen ? "3rem" : "15rem" }}
           whileInView={{ opacity: 1, width: isSmallScreen ? "15rem" : "30rem" }}
           transition={{
             delay: 0.3,
@@ -56,7 +56,7 @@ export const LampContainer = ({
           <div className="absolute  w-40 h-[100%] left-0 bg-slate-950  bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0.5, width: isSmallScreen ? "3rem" : "30rem" }}
+          initial={{ opacity: 0.5, width: isSmallScreen ? "3rem" : "15rem" }}
           whileInView={{ opacity: 1, width: isSmallScreen ? "10rem" : "30rem" }}
           transition={{
             delay: 0.3,
@@ -85,7 +85,7 @@ export const LampContainer = ({
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
         ></motion.div>
         <motion.div
-          initial={{ width: isSmallScreen ? "3rem" : "30rem" }}
+          initial={{ width: isSmallScreen ? "3rem" : "15rem" }}
           whileInView={{ width: isSmallScreen ? "15rem" : "30rem" }}
           transition={{
             delay: 0.3,
