@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "../../components/home/Hero";
 import { Services } from "../../components/home/Services";
@@ -14,11 +14,19 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
   const [scrollDirection, setScrollDirection] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
+  const startYRef = useRef(0);
 
-  const handleScroll = (event: WheelEvent) => {
+  const handleScroll = (event: WheelEvent | TouchEvent) => {
     if (isAnimating) return;
 
-    const direction = event.deltaY > 0 ? 1 : -1;
+    let direction: number;
+    if (event instanceof WheelEvent) {
+      direction = event.deltaY > 0 ? 1 : -1;
+    } else {
+      const touch = event.touches[0] || event.changedTouches[0];
+      direction = touch.clientY < startYRef.current ? 1 : -1;
+    }
+
     const nextSection = Math.min(Math.max(activeSection + direction, 0), sections.length - 1);
     if (nextSection !== activeSection) {
       setScrollDirection(direction);
@@ -28,10 +36,23 @@ export default function Home() {
   };
 
   useEffect(() => {
+    const handleTouchStart = (event: TouchEvent) => {
+      const touch = event.touches[0];
+      startYRef.current = touch.clientY;
+    };
+
+    const handleTouchMove = (event: TouchEvent) => {
+      handleScroll(event);
+    };
+
     window.addEventListener("wheel", handleScroll);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [activeSection, isAnimating]);
 
