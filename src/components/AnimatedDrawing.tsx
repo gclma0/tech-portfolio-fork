@@ -39,7 +39,7 @@ const AnimatedTextUnderlign = () => {
           </motion.svg>
           <span className="relative text-teal-500 font-alliance">Welcome</span>
         </span>
-        {' '} to Tech Company
+        {' '} to PineApple Tech
       </h1>
     </div>
   );

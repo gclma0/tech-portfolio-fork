@@ -8,9 +8,10 @@ import { Choice } from "@/components/home/Choice";
 import { Testimonial } from "@/components/home/Testimonial";
 import Featured from "@/components/home/Featured";
 import Contact from "@/components/home/Contact";
+import { Softwares } from "@/components/home/Softwares";
 
 export default function Home() {
-  const sections = ["hero", "features", "expertise", "choose", "testimonial", "featured", "contact"];
+  const sections = ["hero", "features", "softwares", "choose", "testimonial", "featured", "expertise", "contact"];
   const [activeSection, setActiveSection] = useState(0);
   const [scrollDirection, setScrollDirection] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -138,7 +139,7 @@ const Section: React.FC<SectionProps> = ({
       initial="hidden"
       animate={isActive ? "visible" : "exit"}
       variants={variants}
-      transition={{ duration: 1 }} // Increase duration for slower animation
+      transition={{ duration: 1 }}
       onAnimationStart={() => setIsAnimating(true)}
       onAnimationComplete={() => setIsAnimating(false)}
       style={{ pointerEvents: isActive ? "auto" : "none" }}
@@ -158,14 +159,16 @@ const SectionContent: React.FC<SectionContentProps> = ({ name }) => {
       return <Hero />;
     case "features":
       return <Services />;
-    case "expertise":
-      return <Expertise />;
+    case "softwares":
+      return <Softwares />
     case "choose":
       return <Choice />;
     case "testimonial":
       return <Testimonial />;
     case "featured":
       return <Featured />;
+    case "expertise":
+      return <Expertise />;
     case "contact":
       return <Contact />;
     default:

@@ -37,13 +37,13 @@ const Contact = () => {
           <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
           <div className="max-w-xl mx-auto">
             <p className="text-lg mb-4">
-              <strong>Address:</strong> 1234 Main Street, Anytown, USA
+              <strong>Address:</strong> House-105, Road No-4, Block-B, Banani, Dhaka, USA
             </p>
             <p className="text-lg mb-4">
-              <strong>Phone:</strong> (123) 456-7890
+              <strong>Phone:</strong> +8801717158743
             </p>
             <p className="text-lg mb-4">
-              <strong>Email:</strong> info@company.com
+              <strong>Email:</strong> buckyy@gmail.com
             </p>
             <div className="flex justify-center space-x-4 mt-8">
               <a

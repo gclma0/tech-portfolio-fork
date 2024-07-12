@@ -5,7 +5,7 @@ const Featured = () => {
   return (
     <div className="flex flex-col items-center justify-center h-full w-full">
       <BlurFade delay={0.25} inView>
-      <h2 className="text-3xl font-bold mb-8">Featured Works</h2>
+      <h2 className="text-3xl font-bold mb-8 px-8">Featured Works</h2>
       <div className="flex flex-wrap justify-around gap-4">
         <div className="w-80 mb-8 bg-gray-900 rounded-xl p-4 cursor-pointer">
           <Image
