@@ -1,22 +1,30 @@
-"use client";
+"use client"
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "../../components/home/Hero";
-import {Services} from "../../components/home/Services";
+import { Services } from "../../components/home/Services";
 import Expertise from "../../components/home/Expertise";
 import { Choice } from "@/components/home/Choice";
 import { Testimonial } from "@/components/home/Testimonial";
+import Featured from "@/components/home/Featured";
+import Contact from "@/components/home/Contact";
 
 export default function Home() {
-  const sections = ["hero", "features", "about", "contact", "testimonial", "footer"];
+  const sections = ["hero", "features", "expertise", "choose", "testimonial", "featured", "contact"];
   const [activeSection, setActiveSection] = useState(0);
   const [scrollDirection, setScrollDirection] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleScroll = (event: WheelEvent) => {
+    if (isAnimating) return;
+
     const direction = event.deltaY > 0 ? 1 : -1;
-    setScrollDirection(direction);
     const nextSection = Math.min(Math.max(activeSection + direction, 0), sections.length - 1);
-    setActiveSection(nextSection);
+    if (nextSection !== activeSection) {
+      setScrollDirection(direction);
+      setActiveSection(nextSection);
+      setIsAnimating(true);
+    }
   };
 
   useEffect(() => {
@@ -25,10 +33,13 @@ export default function Home() {
     return () => {
       window.removeEventListener("wheel", handleScroll);
     };
-  }, [activeSection]);
+  }, [activeSection, isAnimating]);
 
   const handleClick = (index: number) => {
+    if (isAnimating) return;
+
     setActiveSection(index);
+    setIsAnimating(true);
   };
 
   return (
@@ -61,6 +72,7 @@ export default function Home() {
             name={section}
             isActive={activeSection === index}
             scrollDirection={scrollDirection}
+            setIsAnimating={setIsAnimating}
           />
         ))}
       </div>
@@ -73,9 +85,16 @@ interface SectionProps {
   name: string;
   isActive: boolean;
   scrollDirection: number;
+  setIsAnimating: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Section: React.FC<SectionProps> = ({ id, name, isActive, scrollDirection }) => {
+const Section: React.FC<SectionProps> = ({
+  id,
+  name,
+  isActive,
+  scrollDirection,
+  setIsAnimating,
+}) => {
   const variants = {
     hidden: {
       opacity: 0,
@@ -98,10 +117,12 @@ const Section: React.FC<SectionProps> = ({ id, name, isActive, scrollDirection }
       initial="hidden"
       animate={isActive ? "visible" : "exit"}
       variants={variants}
-      transition={{ duration: 0.5 }}
-      style={{ pointerEvents: isActive ? 'auto' : 'none' }}
+      transition={{ duration: 1 }} // Increase duration for slower animation
+      onAnimationStart={() => setIsAnimating(true)}
+      onAnimationComplete={() => setIsAnimating(false)}
+      style={{ pointerEvents: isActive ? "auto" : "none" }}
     >
-      <SectionContent name={name} />
+      {isActive && <SectionContent name={name} />}
     </motion.div>
   );
 };
@@ -116,21 +137,16 @@ const SectionContent: React.FC<SectionContentProps> = ({ name }) => {
       return <Hero />;
     case "features":
       return <Services />;
-    case "about":
+    case "expertise":
       return <Expertise />;
-    case "contact":
+    case "choose":
       return <Choice />;
     case "testimonial":
       return <Testimonial />;
-    case "footer":
-      return (
-        <div>
-          <h1 className="text-4xl mb-4">Footer</h1>
-          <p className="text-lg">
-            Thank you for visiting our website. Follow us on social media for updates and more information.
-          </p>
-        </div>
-      );
+    case "featured":
+      return <Featured />;
+    case "contact":
+      return <Contact />;
     default:
       return (
         <div>

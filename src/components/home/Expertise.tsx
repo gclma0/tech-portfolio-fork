@@ -58,7 +58,6 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1, // Delay after previous section
       staggerChildren: 0.2
     }
   }
