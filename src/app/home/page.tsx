@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "../../components/home/Hero";
@@ -121,14 +121,17 @@ const Section: React.FC<SectionProps> = ({
     hidden: {
       opacity: 0,
       y: scrollDirection > 0 ? 50 : -50,
+      scale: 0.95
     },
     visible: {
       opacity: 1,
       y: 0,
+      scale: 1
     },
     exit: {
       opacity: 0,
       y: scrollDirection > 0 ? -50 : 50,
+      scale: 0.95
     },
   };
 
@@ -160,7 +163,7 @@ const SectionContent: React.FC<SectionContentProps> = ({ name }) => {
     case "features":
       return <Services />;
     case "softwares":
-      return <Softwares />
+      return <Softwares />;
     case "choose":
       return <Choice />;
     case "testimonial":

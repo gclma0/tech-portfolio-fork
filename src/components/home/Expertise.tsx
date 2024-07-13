@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Computer, Smartphone, Code, Server } from 'lucide-react';
+import { Boxes } from '../ui/background-boxes';
 
 const Expertise: React.FC = () => {
   const expertiseData = [
@@ -30,8 +31,8 @@ const Expertise: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Expertise</h2>
+      <div className="container mx-auto px-4 relative z-50">
+        <h2 className="text-3xl font-bold text-center mb-12 inline-block px-8">Our Expertise</h2>
         <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 px-8">
           {expertiseData.map((item, index) => (
             <motion.div
@@ -48,6 +49,7 @@ const Expertise: React.FC = () => {
           ))}
         </div>
       </div>
+      <Boxes className='opacity-30'/>
     </motion.div>
   );
 };

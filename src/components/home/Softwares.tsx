@@ -1,9 +1,11 @@
 import BlurFade from '../magicui/blur-fade';
+import { BackgroundBeams } from '../ui/background-beams';
 import { EvervaultCard, Icon } from "../ui/evervault-card";
 
 export function Softwares() {
   return (
-    <BlurFade delay={0.25} inView className="max-w-[100rem] mx-auto px-8 py-16">
+    <div>
+      <BlurFade delay={0.25} inView className="max-w-[100rem] mx-auto px-8 py-16 relative z-50">
       <h2 className='text-xl lg:text-4xl font-semibold py-4 text-left'>Softwares we provide</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 min-w-[20rem]">
         {software.map((item, index) => (
@@ -19,7 +21,9 @@ export function Softwares() {
           </div>
         ))}
       </div>
-    </BlurFade>
+      </BlurFade>
+      <BackgroundBeams />
+    </div>
   );
 }
 

@@ -1,14 +1,15 @@
-// components/home/Hero.tsx
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 import AnimatedDrawing from '../AnimatedDrawing';
 import BlurFade from '@/components/magicui/blur-fade';
 import { AuroraBackground } from '../ui/aurora-background';
+import { NavbarMenu } from '../Navbar';
 
 const Hero: React.FC = () => {
   return (
     <AuroraBackground>
     <div className='px-16'>
+      <NavbarMenu />
         <AnimatedDrawing />
         <BlurFade delay={0.25} inView>
           <h1 className='text-3xl py-8'>We drive business transformation by engineering custom applications and pioneering product innovations.</h1>
