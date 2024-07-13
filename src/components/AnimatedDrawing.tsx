@@ -1,6 +1,7 @@
 
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const AnimatedTextUnderlign = () => {
   const draw = {
@@ -18,11 +19,11 @@ const AnimatedTextUnderlign = () => {
     <div>
       <h1 className="text-5xl font-bold tracking-tight text-gray-200 sm:text-7xl">
         {' '}
-        <span className="relative whitespace-nowrap text-teal-800 font-alliance">
+        <span className="relative whitespace-nowrap text-blue-800 font-alliance">
           <motion.svg
             aria-hidden="true"
             viewBox="0 0 418 42"
-            className="absolute left-0 top-1/3 fill-teal-500"
+            className="absolute left-0 top-1/3 fill-blue-500"
             preserveAspectRatio="xMidYMid meet"
             width="100%"
             height="100%"
@@ -34,12 +35,12 @@ const AnimatedTextUnderlign = () => {
               variants={draw}
               strokeWidth="6"
               fill="none"
-              stroke="#009080"
+              stroke="#3b82f6"
             />
           </motion.svg>
-          <span className="relative text-teal-500 font-alliance">Welcome</span>
+          <span className="relative text-blue-500 font-alliance">Welcome</span>
         </span>
-        {' '} to PineApple Tech
+        {' '} to OneITech
       </h1>
     </div>
   );

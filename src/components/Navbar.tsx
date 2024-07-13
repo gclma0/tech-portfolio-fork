@@ -27,31 +27,11 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="/web-dev.png"
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="/web-dev.png"
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="/web-dev.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="/web-dev.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
+          <div className="flex flex-col space-y-4 text-sm">
+          <HoveredLink href="/web-dev">FNF</HoveredLink>
+            <HoveredLink href="/interface-design">Web App</HoveredLink>
+            <HoveredLink href="/seo">Mobile App</HoveredLink>
+            <HoveredLink href="/branding">CRM</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Pricing">

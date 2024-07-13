@@ -70,9 +70,19 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border bg-[#020817] border-white/[0.2] shadow-input flex justify-center space-x-4 px-8 py-3 "
+      className="relative rounded-full border bg-[#020817] border-white/[0.2] shadow-input flex justify-between items-center space-x-4 px-8 py-3 "
     >
-      {children}
+       <Image 
+          src="/logo.png"
+          alt="Logo"
+          width={100}
+          height={100}
+          layout="responsive"
+          className="max-w-[5rem]"
+        />
+      <div className="flex gap-4">
+        {children}
+      </div>
     </nav>
   );
 };

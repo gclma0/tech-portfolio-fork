@@ -40,10 +40,10 @@ const Contact = () => {
               <strong>Address:</strong> House-105, Road No-4, Block-B, Banani, Dhaka, USA
             </p>
             <p className="text-lg mb-4">
-              <strong>Phone:</strong> +8801717158743
+              <strong>Phone:</strong> +8801712345678
             </p>
             <p className="text-lg mb-4">
-              <strong>Email:</strong> buckyy@gmail.com
+              <strong>Email:</strong> oneitech@gmail.com
             </p>
             <div className="flex justify-center space-x-4 mt-8">
               <a
