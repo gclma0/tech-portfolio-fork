@@ -3,11 +3,11 @@ import BlurFade from "../magicui/blur-fade";
 
 const Featured = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full">
+    <div className="flex flex-col items-center justify-center">
       <BlurFade delay={0.25} inView>
-      <h2 className="text-3xl font-bold mb-8">Featured Works</h2>
+      <h2 className="text-3xl font-bold mb-8 container">Featured Works</h2>
       <div className="flex flex-wrap justify-around gap-4">
-        <div className="w-80 mb-8 bg-gray-900 rounded-xl p-4 cursor-pointer">
+        <div className="md:[w-80] w-[60%] mb-8 bg-gray-900 rounded-xl p-4 cursor-pointer">
           <Image
             src="/web-dev.png"
             alt="Web Development"
@@ -18,7 +18,7 @@ const Featured = () => {
           <h3 className="text-xl font-semibold mt-4">Web Development</h3>
           <p className="mt-2 text-gray-600">Visit to see some of our projects</p>
         </div>
-        <div className="w-80 mb-8 bg-gray-900 rounded-xl p-4 cursor-pointer">
+        <div className="md:[w-80] w-[60%] mb-8 bg-gray-900 rounded-xl p-4 cursor-pointer">
           <Image
             src="/graphic-design.jpg"
             alt="Work 2"

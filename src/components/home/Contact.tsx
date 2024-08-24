@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center h-full w-full p-4 text-center"
+      className="flex flex-col items-center justify-center h-full w-full text-center"
     >
       <LampContainer>
         <motion.div
@@ -37,7 +37,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
           <div className="max-w-xl mx-auto">
             <p className="text-lg mb-4">
-              <strong>Address:</strong> House-105, Road No-4, Block-B, Banani, Dhaka, USA
+              <strong>Address:</strong> House-105, Road No-4, Block-D, Banani, Dhaka, Bangladesh
             </p>
             <p className="text-lg mb-4">
               <strong>Phone:</strong> +8801712345678

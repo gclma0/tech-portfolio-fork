@@ -76,7 +76,7 @@ export const LampContainer = ({
         <div className="absolute inset-auto z-50 h-36 w-[18rem] md:w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"></div>
         <motion.div
           initial={{ width: "8rem" }}
-          whileInView={{ width: "16rem" }}
+          whileInView={{ width: isSmallScreen ? "5rem" : "16rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,

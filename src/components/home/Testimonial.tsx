@@ -19,31 +19,39 @@ export function Testimonial() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "Instant-Dokan has revolutionized the way we handle e-commerce. The platform is incredibly user-friendly, and the customer support is top-notch.",
+    name: "Anika Rahman",
+    title: "",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "Thanks to Instant-Dokan, our sales have doubled in the last quarter. The seamless integration with our existing systems made the transition smooth and efficient.",
+    name: "Abderrehmane Bouali",
+    title: "",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "The custom solutions provided by Instant-Dokan perfectly matched our business needs. The team was extremely responsive and professional.",
+    name: "Farhana Haque",
+    title: "",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "We've seen remarkable growth since partnering with Instant-Dokan. Their innovative approach and dedication to client success are truly commendable.",
+    name: "Carlos Hernandez",
+    title: "",
+  },
+  {
+    quote:
+      "Instant-Dokan has been instrumental in streamlining our operations. Their robust platform and exceptional support have made a significant difference in our business.",
+    name: "Tanvir Ahmed",
+    title: "",
+  },
+  {
+    quote:
+      "As a small business owner, I was looking for a reliable tech partner, and Instant-Dokan exceeded my expectations. Their platform is intuitive and powerful.",
+    name: "Emma Johnson",
+    title: "",
   },
 ];
+
