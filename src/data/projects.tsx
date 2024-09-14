@@ -26,49 +26,49 @@ const projects = [
       {
         title: "Cyber Security",
         description: "Protecting your digital assets with advanced cybersecurity measures.",
-        link: "/projects/cyber-security",
+        link: "/services/cyber-security",
         details: "We offer comprehensive cybersecurity solutions to protect your business from digital threats. Our services include threat detection, risk assessment, and the implementation of robust security measures to safeguard your data and ensure compliance with industry standards."
       },
       {
         title: "Automation and IOT",
         description: "Implementing smart automation and IoT solutions for enhanced efficiency.",
-        link: "/projects/automation-and-iot",
+        link: "/services/automation-and-iot",
         details: "Our automation and IoT services are designed to streamline your operations and increase efficiency. By integrating smart devices and automated systems, we help you monitor and control your business processes in real-time, leading to improved productivity and reduced operational costs."
       },
       {
         title: "Backup and Disaster Recovery",
         description: "Ensuring data safety with robust backup and disaster recovery solutions.",
-        link: "/projects/backup-and-disaster-recovery",
+        link: "/services/backup-and-disaster-recovery",
         details: "Our backup and disaster recovery services ensure your critical data is protected and can be restored quickly in the event of a disruption. We offer scalable backup solutions and disaster recovery planning to minimize downtime and ensure business continuity."
       },
       {
         title: "UI/UX Design",
         description: "Crafting intuitive and engaging user interfaces and experiences.",
-        link: "/projects/ui-ux-design",
+        link: "/services/ui-ux-design",
         details: "We specialize in creating user-centric UI/UX designs that enhance user satisfaction and drive engagement. Our approach focuses on understanding your users' needs and designing interfaces that are both visually appealing and easy to navigate, resulting in a seamless user experience."
       },
       {
         title: "Domain, Hosting and Email Services",
         description: "Comprehensive domain, hosting, and email solutions for your business.",
-        link: "/projects/domain-hosting-and-email-services",
+        link: "/services/domain-hosting-and-email-services",
         details: "Our domain, hosting, and email services offer a complete package to establish and maintain your online presence. We provide reliable hosting, professional email solutions, and domain management services that ensure your business remains accessible and operational at all times."
       },
       {
         title: "Marketing Consultancy",
         description: "Expert marketing strategies to elevate your brand's presence.",
-        link: "/projects/marketing-consultancy",
+        link: "/services/marketing-consultancy",
         details: "Our marketing consultancy services are designed to help you achieve your business goals through strategic planning and execution. We offer expertise in branding, digital marketing, and campaign management to increase your visibility and reach your target audience effectively."
       },
       {
         title: "End User Workplace Support",
         description: "Providing seamless support to enhance end-user productivity.",
-        link: "/projects/end-user-workplace-support",
+        link: "/services/end-user-workplace-support",
         details: "We provide end-user workplace support to ensure your employees have the tools and assistance they need to work efficiently. Our services include IT support, software troubleshooting, and training, all aimed at minimizing disruptions and maximizing productivity."
       },
       {
         title: "AI and Machine Learning",
         description: "Harnessing the power of AI and machine learning for innovative solutions.",
-        link: "/projects/ai-and-machine-learning",
+        link: "/services/ai-and-machine-learning",
         details: "Our AI and machine learning services help you leverage advanced technologies to drive innovation. We offer solutions that include predictive analytics, natural language processing, and automation, enabling you to make data-driven decisions and optimize your business processes."
       },
   ];
