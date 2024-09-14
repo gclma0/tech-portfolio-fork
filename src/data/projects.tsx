@@ -2,25 +2,25 @@ const projects = [
     {
         title: "Software Development and ERP Solution",
         description: "Custom software and ERP solutions to streamline your business operations.",
-        link: "/projects/software-development-and-erp-solution",
+        link: "/services/software-dev-and-erp-solution",
         details: "Our software development and ERP solutions are designed to automate and optimize your business processes, offering seamless integration with your existing systems and enhancing overall productivity. We specialize in creating scalable, robust software tailored to your specific needs."
       },
       {
         title: "Cloud Onboarding/Services",
         description: "Efficient and secure cloud services to boost your productivity.",
-        link: "/projects/cloud-onboarding-services",
+        link: "/services/cloud-onboarding-services",
         details: "We provide comprehensive cloud onboarding and management services that ensure a smooth transition to cloud infrastructure. Our team focuses on security, scalability, and efficiency, helping you harness the full potential of cloud technology."
       },
       {
         title: "Web and App Development",
         description: "Creating innovative web and mobile applications tailored to your needs.",
-        link: "/projects/web-and-app-development",
+        link: "/services/web-and-app-development",
         details: "Our web and app development services cover everything from initial concept to deployment. We create responsive, user-friendly web and mobile applications that provide an engaging experience for your users and drive business success."
       },
       {
         title: "Network Solutions",
         description: "Reliable network infrastructure to keep your business connected.",
-        link: "/projects/network-solutions",
+        link: "/services/network-solutions",
         details: "Our network solutions provide a reliable and secure infrastructure tailored to your business needs. From design and implementation to maintenance, we ensure your network operates at peak efficiency, enabling seamless communication and connectivity across your organization."
       },
       {
