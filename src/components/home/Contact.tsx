@@ -5,6 +5,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { LampContainer } from "../ui/lamp";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
+
 const Contact = () => {
   const { ref, isIntersecting } = useIntersectionObserver();
 
@@ -37,13 +38,13 @@ const Contact = () => {
           <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
           <div className="max-w-xl mx-auto">
             <p className="text-lg mb-4">
-              <strong>Address:</strong> House-105, Road No-4, Block-D, Banani, Dhaka, Bangladesh
+              <strong>Address:</strong> House- 105, Road- 4, Block- B, Banani, Dhaka- 1213, Bangladesh
             </p>
             <p className="text-lg mb-4">
-              <strong>Phone:</strong> +8801712345678
+              <strong>Phone:</strong> +8801775733499
             </p>
             <p className="text-lg mb-4">
-              <strong>Email:</strong> oneitech@gmail.com
+              <strong>Email:</strong> info@oneitech.co
             </p>
             <div className="flex justify-center space-x-4 mt-8">
               <a

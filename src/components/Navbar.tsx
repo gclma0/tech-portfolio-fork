@@ -19,27 +19,56 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
+          <div className="flex gap-4">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">Software Development and ERP Solution</HoveredLink>
+            <HoveredLink href="/interface-design">Network Solutions</HoveredLink>
+            <HoveredLink href="/seo">Backup and Disaster Recovery</HoveredLink>
+            <HoveredLink href="/branding">Marketing Consultancy</HoveredLink>
+            <HoveredLink href="/branding">Cloud Onboarding/Services</HoveredLink>
+            <HoveredLink href="/branding">Cyber Security</HoveredLink>
+          </div>
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">UI/UX Design</HoveredLink>
+            <HoveredLink href="/interface-design">End User Workplace Support</HoveredLink>
+            <HoveredLink href="/seo">Web and App Development</HoveredLink>
+            <HoveredLink href="/branding">Automation and IOT</HoveredLink>
+            <HoveredLink href="/branding">Domain, Hosting and Email Services</HoveredLink>
+            <HoveredLink href="/branding">AI and Machine Learning</HoveredLink>
+          </div>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Products">
+          <div className="flex gap-4">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/web-dev">Freight Management</HoveredLink>
+              <HoveredLink href="/interface-design">HRM</HoveredLink>
+              <HoveredLink href="/seo">Accounting</HoveredLink>
+              <HoveredLink href="/branding">Event MGT</HoveredLink>
+              <HoveredLink href="/branding">Site Engineer Remote MGT</HoveredLink>
+              <HoveredLink href="/branding">Tele Medicine</HoveredLink>
+            </div>
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/web-dev">Fixed Asset MGT</HoveredLink>
+              <HoveredLink href="/interface-design">Provident Fund MGT</HoveredLink>
+              <HoveredLink href="/seo">Hospital MGT</HoveredLink>
+              <HoveredLink href="/branding">CRM</HoveredLink>
+              <HoveredLink href="/branding">Vat MGT</HoveredLink>
+              <HoveredLink href="/branding">Income Tax Return MGT</HoveredLink>
+            </div>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Contact">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/location">Location</HoveredLink>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="About Us">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Web Development</HoveredLink>
             <HoveredLink href="/interface-design">Interface Design</HoveredLink>
             <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
             <HoveredLink href="/branding">Branding</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="flex flex-col space-y-4 text-sm">
-          <HoveredLink href="/web-dev">FNF</HoveredLink>
-            <HoveredLink href="/interface-design">Web App</HoveredLink>
-            <HoveredLink href="/seo">Mobile App</HoveredLink>
-            <HoveredLink href="/branding">CRM</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           </div>
         </MenuItem>
       </Menu>
