@@ -19,37 +19,37 @@ export function Testimonial() {
 const testimonials = [
   {
     quote:
-      "Instant-Dokan has revolutionized the way we handle e-commerce. The platform is incredibly user-friendly, and the customer support is top-notch.",
+      "OneiTech has revolutionized the way we handle e-commerce. The platform is incredibly user-friendly, and the customer support is top-notch.",
     name: "Anika Rahman",
     title: "",
   },
   {
     quote:
-      "Thanks to Instant-Dokan, our sales have doubled in the last quarter. The seamless integration with our existing systems made the transition smooth and efficient.",
+      "Thanks to OneiTech, our sales have doubled in the last quarter. The seamless integration with our existing systems made the transition smooth and efficient.",
     name: "Abderrehmane Bouali",
     title: "",
   },
   {
     quote:
-      "The custom solutions provided by Instant-Dokan perfectly matched our business needs. The team was extremely responsive and professional.",
+      "The custom solutions provided by OneiTech perfectly matched our business needs. The team was extremely responsive and professional.",
     name: "Farhana Haque",
     title: "",
   },
   {
     quote:
-      "We've seen remarkable growth since partnering with Instant-Dokan. Their innovative approach and dedication to client success are truly commendable.",
+      "We've seen remarkable growth since partnering with OneiTech. Their innovative approach and dedication to client success are truly commendable.",
     name: "Carlos Hernandez",
     title: "",
   },
   {
     quote:
-      "Instant-Dokan has been instrumental in streamlining our operations. Their robust platform and exceptional support have made a significant difference in our business.",
+      "OneiTech has been instrumental in streamlining our operations. Their robust platform and exceptional support have made a significant difference in our business.",
     name: "Tanvir Ahmed",
     title: "",
   },
   {
     quote:
-      "As a small business owner, I was looking for a reliable tech partner, and Instant-Dokan exceeded my expectations. Their platform is intuitive and powerful.",
+      "As a small business owner, I was looking for a reliable tech partner, and OneiTech exceeded my expectations. Their platform is intuitive and powerful.",
     name: "Emma Johnson",
     title: "",
   },
