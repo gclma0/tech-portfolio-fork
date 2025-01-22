@@ -14,12 +14,9 @@ export default function Home() {
   const sections = ["hero", "features", "softwares", "choose", "testimonial", "featured", "expertise", "contact"];
   const [activeSection, setActiveSection] = useState(0);
   const [scrollDirection, setScrollDirection] = useState(1);
-  const [isAnimating, setIsAnimating] = useState(false);
   const startYRef = useRef(0);
 
   const handleScroll = (event: WheelEvent | TouchEvent) => {
-    if (isAnimating) return;
-
     let direction: number;
     if (event instanceof WheelEvent) {
       direction = event.deltaY > 0 ? 1 : -1;
@@ -32,7 +29,6 @@ export default function Home() {
     if (nextSection !== activeSection) {
       setScrollDirection(direction);
       setActiveSection(nextSection);
-      setIsAnimating(true);
     }
   };
 
@@ -55,13 +51,10 @@ export default function Home() {
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [activeSection, isAnimating]);
+  }, [activeSection]);
 
   const handleClick = (index: number) => {
-    if (isAnimating) return;
-
     setActiveSection(index);
-    setIsAnimating(true);
   };
 
   return (
@@ -94,7 +87,7 @@ export default function Home() {
             name={section}
             isActive={activeSection === index}
             scrollDirection={scrollDirection}
-            setIsAnimating={setIsAnimating}
+            isLastTwo={index >= sections.length - 2}
           />
         ))}
       </div>
@@ -107,7 +100,7 @@ interface SectionProps {
   name: string;
   isActive: boolean;
   scrollDirection: number;
-  setIsAnimating: React.Dispatch<React.SetStateAction<boolean>>;
+  isLastTwo: boolean;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -115,23 +108,23 @@ const Section: React.FC<SectionProps> = ({
   name,
   isActive,
   scrollDirection,
-  setIsAnimating,
+  isLastTwo,
 }) => {
   const variants = {
     hidden: {
       opacity: 0,
       y: scrollDirection > 0 ? 50 : -50,
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1
+      scale: 1,
     },
     exit: {
       opacity: 0,
       y: scrollDirection > 0 ? -50 : 50,
-      scale: 0.95
+      scale: 0.95,
     },
   };
 
@@ -142,9 +135,7 @@ const Section: React.FC<SectionProps> = ({
       initial="hidden"
       animate={isActive ? "visible" : "exit"}
       variants={variants}
-      transition={{ duration: 1 }}
-      onAnimationStart={() => setIsAnimating(true)}
-      onAnimationComplete={() => setIsAnimating(false)}
+      transition={{ duration: isLastTwo ? 0.5 : 0.8 }} // Faster for last two sections
       style={{ pointerEvents: isActive ? "auto" : "none" }}
     >
       {isActive && <SectionContent name={name} />}
